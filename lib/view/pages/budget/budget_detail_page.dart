@@ -11,17 +11,16 @@ class BudgetDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Budget Detail'),
+        title: Text(
+          'Budget Name',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Budget: ${controller.name}',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
             SizedBox(height: 10),
             Text('Budget Size: \$${controller.amount.toStringAsFixed(2)}'),
             SizedBox(height: 10),

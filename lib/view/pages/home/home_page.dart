@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:simple_budget/view/pages/budget/budget_detail_page.dart';
 import 'package:simple_budget/view/pages/home/home_page_controller.dart';
+
+import '../../router/router.dart';
 
 class HomePage extends StatelessWidget {
   final controller = Get.put(HomePageController());
@@ -41,8 +42,7 @@ class HomePage extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
                       onTap: () {
-                        // Handle budget item tap
-                        Get.to(() => BudgetDetailPage());
+                        Get.toNamed(Routes.budgetDetailPage);
                       },
                       child: Card(
                         elevation: 2,
